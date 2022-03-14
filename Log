@@ -1,0 +1,21 @@
+参考Web site
+#IFをマッチさせる
+https://forest.watch.impress.co.jp/docs/serial/exceltips/1338185.html
+
+#csvファイルの読み込み
+https://www.isc.meiji.ac.jp/~mizutani/R/spread/readwrite.html
+https://sites.google.com/site/webtextofr/data
+https://webbeginner.hatenablog.com/entry/2017/07/13/145129
+
+データ分析をするときに、何かのアプリケーションで作成したテキストデータをRに読み込ませることがあります。
+もっとも汎用的な関数はread.table関数です。この関数では、以下のようにファイル名、区切り文字、変数名ラベルの有無などを設定してRのデータフレーム型のオブジェクトとして読み込みます。
+
+data <- read.table("ファイル名", sep = "", header = TRUE)
+上記のうち、sepが区切り文字です。カンマ区切りなら","、タブ区切りなら"\t"にします。header はテキストファイルの１行目に変数名があるならTRUE、ないならFALSEにします。
+
+https://qiita.com/mzmz__02/items/177a085192615505053a
+　ネットで調べてみるとエンコーディングを指定するとうまくいくようだが、私の場合はファイルの保存方法を間違えていただけだった。
+
+　Excelで作ったファイルを.csvで保存するときは名前を付けて保存にするのではなく、エクスポートからファイルを保存するとうまくできた。
+　
+http://biochemistry.isc.chubu.ac.jp/labo/suzuki/archives/1105
